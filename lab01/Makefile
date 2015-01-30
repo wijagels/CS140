@@ -20,3 +20,6 @@ docs:
 
 clean:
 	$(RM) *.class *.html *.css *.js package-list
+	$(RM)r lab01/
+
+all:	classes	docs
