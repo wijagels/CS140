@@ -1,3 +1,4 @@
+# Adapted from http://www.cs.swarthmore.edu/~newhall/unixhelp/javamakefiles.html
 JFLAGS = -d .
 JC = javac
 JD = javadoc
@@ -16,7 +17,7 @@ default: classes
 classes: $(CLASSES:.java=.class)
 
 docs:
-	$(JD) *.java
+	$(JD) -d docs/ *.java
 
 clean:
 	$(RM) *.class *.html *.css *.js package-list

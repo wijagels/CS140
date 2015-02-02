@@ -1,11 +1,21 @@
 package lab01;
 
 /**
- * This program tries to calculate payments in the stupidest way possible
+ * This class includes a collection of methods that make your
+ * processor work hard
  *
  * @author William Jagels
  */
 public class NaivePaymentCalculator {
+    /**
+     * This method tries to calculate payments by testing values one cent
+     * at a time.
+     * @param total the initial loan value
+     * @param apr the annual percentage rate
+     * @param the desired months to pay the loan off in
+     * @return the minimum monthly payment to pay off the loan in the desired
+     * number of months
+     */
     public static double payment(int total, double apr, int numMonths) {
         boolean done = false;
         double payment = 1;
@@ -22,4 +32,28 @@ public class NaivePaymentCalculator {
         }
         return payment;
     }
+
+    /**
+     * This method will calculate the maximum loan possible to
+     * be repaid with a set of parameters
+     * @param apr the annual percentage rate desired
+     * @param numMonths the number of months to pay off the loan
+     * @param payment the maximum monthly payment
+     * @return the largest possible loan dollar amount
+     */
+    public static double possibleTotal(double apr, int numMonths, double payment) {
+        int months = 0;
+        int maxLoan = (int)payment;
+        while(months <= numMonths) {
+            try {
+                HomeLoan h = new HomeLoan(maxLoan, apr, payment);
+                months = h.payoffMonths();
+                maxLoan++;
+            } catch (IllegalArgumentException e) {
+                maxLoan++;
+            }
+        }
+        return maxLoan;
+    }
+
 }
