@@ -12,7 +12,7 @@ public class NaivePaymentCalculator {
      * at a time.
      * @param total the initial loan value
      * @param apr the annual percentage rate
-     * @param the desired months to pay the loan off in
+     * @param numMonths the desired months to pay the loan off in
      * @return the minimum monthly payment to pay off the loan in the desired
      * number of months
      */
