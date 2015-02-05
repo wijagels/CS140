@@ -3,3 +3,5 @@
 *.js
 *.css
 package-list
+*.tar
+*.tar.gz
