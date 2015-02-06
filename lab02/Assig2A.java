@@ -31,7 +31,8 @@ public class Assig2A {
 		for(int i=0;i<ls.length;i++) {
 			ls[i] = new Lab02B(randomInts(4));
 		}
-		System.out.println(simpleLargestArea(ls) + "  " + Arrays.toString(ls));
+		System.out.println(Arrays.toString(ls));
+		System.out.println(simpleLargestArea(ls));
 		System.out.println(simpleTopLeftMost(ls));
 	}
 
