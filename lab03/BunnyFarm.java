@@ -13,6 +13,10 @@ public class BunnyFarm {
         this.bunnies.add(bunny);
     }
 
+    public void removeBunny(Bunny bunny) {
+        this.bunnies.remove(bunny);
+    }
+
     public Bunny findBunny(String name) {
         for(int i=0; i<this.bunnies.size(); i++) {
             if(this.bunnies.get(i).getName().equals(name)) {
@@ -24,5 +28,13 @@ public class BunnyFarm {
 
     public ArrayList<Bunny> getBunnies() {
         return this.bunnies;
+    }
+
+    public int bunnyNameSum() {
+        int s = 0;
+        for(Bunny b : this.bunnies) {
+            s += b.getName().length();
+        }
+        return s;
     }
 }

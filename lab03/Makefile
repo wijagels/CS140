@@ -12,6 +12,7 @@ CLASSES = \
 	Driver.java \
 	BunnyFarm.java \
 	Person.java \
+	Contest.java \
 	Negotiator.java
 
 default: classes
@@ -30,6 +31,4 @@ all:	classes test
 
 test:
 	$(JC) -d . -cp .:junit.jar:hamcrest.jar Tester.java
-	java -cp .:junit.jar:hamcrest.jar org.junit.runner.JUnitCore lab03.Tester
-	$(JC) -d . -cp .:junit.jar:hamcrest.jar TesterA.java
-	java -cp .:junit.jar:hamcrest.jar org.junit.runner.JUnitCore assignment03.TesterA
+	java -cp .:junit.jar:hamcrest.jar org.junit.runner.JUnitCore assignment03.Tester

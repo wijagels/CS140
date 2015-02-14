@@ -1,4 +1,4 @@
-package lab03;
+package assignment03;
 
 import java.util.ArrayList;
 

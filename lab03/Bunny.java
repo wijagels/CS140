@@ -1,4 +1,4 @@
-package lab03;
+package assignment03;
 
 public class Bunny {
 	private String name;
