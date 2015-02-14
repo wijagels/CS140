@@ -10,8 +10,8 @@ JD = javadoc
 CLASSES = \
 	Lab02A.java \
 	Lab02B.java \
+	Assig2A.java \
 	Lab02BTest.java \
-	Assig2A.java
 
 default: classes
 
@@ -22,6 +22,6 @@ docs:
 
 clean:
 	$(RM) *.class *.html *.css *.js package-list
-	$(RM)r lab01/
+	$(RM)r lab02/
 
 all:	classes	docs

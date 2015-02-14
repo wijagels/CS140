@@ -28,6 +28,8 @@ public class Lab02B {
 	}
 
 	public boolean isMoreWeeThan(Lab02B o) {
-		return rect.x < o.getX() || (rect.x == o.getX() && rect.y < o.getY());
+		return o == null ? true : rect.x < o.getX() || (rect.x == o.getX() && rect.y < o.getY());
+		/*Return true o is null or if x is greater than other x, 
+		or if x is equal and y is greater than other y.*/
 	}
 }
