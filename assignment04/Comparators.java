@@ -11,7 +11,7 @@ public class Comparators {
      * amount of bunnies is considered greater than the other
      */
     public Comparator<BunnyFarm> getBunnyFarmComparator() {
-        return null; // TODO implement
+        return Comparator.comparingInt((BunnyFarm b) -> b.getBunnies().size());
     }
 
     /**
@@ -21,7 +21,7 @@ public class Comparators {
      * of the two.
      */
     public Comparator<Person> getPersonComparator() {
-        return null; // TODO implement
+        return Comparator.comparingInt((Person p) -> p.getName().length()).thenComparing(Comparator.comparingInt(Person::getFarm));
     }
 
     /**

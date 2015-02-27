@@ -5,6 +5,7 @@
 package-list
 *.tar
 *.tar.gz
+*.zip
 *.jar
 ~*
 *~
