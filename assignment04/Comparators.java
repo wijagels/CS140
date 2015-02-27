@@ -21,7 +21,7 @@ public class Comparators {
      * of the two.
      */
     public Comparator<Person> getPersonComparator() {
-        return Comparator.comparingInt((Person p) -> p.getName().length()).thenComparing(Comparator.comparingInt(Person::getFarm));
+        return Comparator.comparing((Person p) -> p.getName()).thenComparing(Comparator.comparingInt((Person p) -> p.getFarm().getBunnies().size()));
     }
 
     /**
@@ -33,6 +33,8 @@ public class Comparators {
      * the larger of the two.
      */
     public Comparator<Person> getPersonComparatorComplex() {
-        return null; // TODO implement
+        return Comparator.comparing((Person p) -> p.getName())
+        .thenComparing(Comparator.comparingInt((Person p) -> p.getFarm().getBunnies().size()))
+        .thenComparing(Comparator.comparingInt((Person p) -> p.getFarm().getBunnies().stream().mapToInt(x -> x.getName().length()).sum()));
     }
 }
