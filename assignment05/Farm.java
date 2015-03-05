@@ -11,8 +11,11 @@ public class Farm {
 
     public String chorus() {
     	String s = "";
-    	for(Animal a : animals)
-    		s += a.speak() + "\n";
+    	for(int i = 0;i < animals.size();i++) {
+    		s += animals.get(i).speak();
+            if(i != animals.size() -1)
+                s += "\n";
+        }
     	return s;
     }
 

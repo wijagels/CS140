@@ -5,6 +5,7 @@ public class Bear extends Animal {
         super(name);
     }
 
+    @Override
     public String speak() {
     	return "roar";
     }
