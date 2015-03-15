@@ -11,19 +11,15 @@ public class Driver {
 			arr[1] += i%2 == 0 ? 1 : 0;
 			arr[2] += isPrime(i) ? 1 : 0;
 			for(int k=1;k<=20;k++)
-				arr[k+2] += div(i, k);
-			for(int p=1;p<=10;p++) {
+				arr[k+2] += i % k == 0 ? 1 : 0;
+			for(int p=1;p<=10;p++)
 				arr[22 + (p*(p-1)/2 +1) + i%p]++;
-			}
 			if(i != 0)
 				arr[77 + Character.getNumericValue(is.charAt(0))]++;
-			for(int q=0;q<10;q++){
-				if(is.contains(Integer.toString(q))){
+			for(int q=0;q<10;q++)
+				if(is.contains(Integer.toString(q)))
 					arr[87 + q] += 1;
-				}
-			}
 		}
-		System.out.println(Arrays.toString(arr));
 		return arr;
 	}
 
@@ -37,11 +33,4 @@ public class Driver {
 				return false;
 		return true;
 	}
-
-	private static int div(int num, int mod) {
-		if(num % mod == 0)
-			return 1;
-		return 0;
-	}
-
 }
