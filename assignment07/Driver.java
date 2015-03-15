@@ -1,7 +1,5 @@
 package assignment07;
 
-import java.util.Arrays;
-
 public class Driver {
 	public static int[] getArray(int max) {
 		int[] arr = new int[97];
