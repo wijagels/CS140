@@ -13,7 +13,10 @@ public class BinarySearchTree {
 	}
 
 	public void insert(Node node) {
-		insert(node, this.root);
+        if(root == null)
+            this.root = node;
+		else
+            insert(node, this.root);
 	}
 
 	private void insert(Node node, Node current) {
@@ -35,20 +38,19 @@ public class BinarySearchTree {
 
 	@Override
 	public String toString() {
-		str = "";
+		this.str = "";
 		if(root != null) {
 			traverse(root);
 		}
 		System.out.println(str);
-		return str;
+		return str.trim();
 	}
 
 	private void traverse(Node node) {
 		if(node.getLeft() != null)
 			traverse(node.getLeft());
-		this.str += ", " + node;
-		System.out.println(node);
+		this.str += node + " ";
 		if(node.getRight() != null)
-			traverse(node.getLeft());
+			traverse(node.getRight());
 	}
 }
