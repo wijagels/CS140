@@ -9,10 +9,20 @@ public class Node implements Comparable<Node> {
 		this.left = null;
 		this.right = null;
 	}
-
+    
+    @Override
 	public int compareTo(Node o) {
-		return this.data == o.getData() ? 0 : this.data > o.getData() ? 1 : -1;
-	}
+        System.out.println("Comparing " + this + " and " + o);
+        if(this.data == o.getData()) {
+            System.out.println("Equal data");
+            if(o.toString().contains("b")) {
+                System.out.println("O is a NodeB");
+                return 1;
+            }
+            return 0;
+        }
+        return this.data > o.getData() ? 1 : -1;
+    }
 
 	public int getData() {
 		return this.data;
