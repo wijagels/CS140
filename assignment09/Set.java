@@ -1,7 +1,11 @@
 package assignment09;
 
 import java.util.TreeSet;
+import java.util.Iterator;
 
+/*
+ * Wtf, why are we overriding something from java.util
+ */
 public class Set<T> {
     java.util.Set<T> s;
 
@@ -20,4 +24,9 @@ public class Set<T> {
     public java.util.Set<T> getSet() {
         return this.s;
     }
+
+    public Iterator<T> iterator() {
+        return this.s.iterator();
+    }
+
 }
