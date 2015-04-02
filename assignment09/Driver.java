@@ -31,7 +31,7 @@ public class Driver<T> {
                 r.add(el2);++c;
             }
             el = r.combine(el, el2);
-            if(!r.contains(el)) {
+            if(!r.contains(el) && c < 30) {
                 System.out.println("Adding " + el);
                 r.add(el);++c;
             }
