@@ -1,7 +1,6 @@
 package assignment09;
 
 import java.util.function.BinaryOperator;
-import java.util.Iterator;
 
 public class Group<T> extends Set<T> implements Iterable<T>{
     private BinaryOperator<T> binop;

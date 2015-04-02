@@ -19,13 +19,29 @@ public class Driver<T> {
 
     public Ring<T> generateRing(BinaryOperator<T> combine, BinaryOperator<T> mult, T start) throws NotInException {
         Ring<T> r = new Ring<T>(combine, mult);
-        T element = start;
-        for(int i=0;i<30/2;i++) {// Repeat desired divided by times added
-            r.add(element);
-            System.out.println("add " + element);
+        int c = 0;
+        T el2 = start;
+        r.add(el2);++c;
+        T el = r.combine(start, start);
+        r.add(el);++c;
+        while(c < 30) {
+            el2 = r.combine2(el2,el);
+            if(!r.contains(el2)) {
+                System.out.println("Adding " + el2);
+                r.add(el2);++c;
+            }
+            el = r.combine(el, el2);
+            if(!r.contains(el)) {
+                System.out.println("Adding " + el);
+                r.add(el);++c;
+            }
         }
-        for(T el : r)
-            System.out.println(el);
+        int len = 0;
+        for(T element : r) {
+            len++;
+            System.out.println(element);
+        }
+        System.out.println("Length: " + len);
         return r;
     }
 }
