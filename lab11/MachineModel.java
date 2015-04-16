@@ -10,6 +10,7 @@ public class MachineModel extends Observable{
     private Registers cpu = new Registers();
     private Memory memory = new Memory();
     private boolean withGUI;
+    private Code code;
 
     public MachineModel() {
         this(false);
@@ -18,6 +19,14 @@ public class MachineModel extends Observable{
     public MachineModel(boolean withGUI) {
         this.withGUI = withGUI;
         populate(); //I like concise constructors
+    }
+
+    public Code getCode() {
+        return this.code;
+    }
+
+    public void setCode(Code code) {
+        this.code = code;
     }
 
     public int getData(int index) {
