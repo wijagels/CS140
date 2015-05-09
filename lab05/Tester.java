@@ -13,7 +13,7 @@ public class Tester {
         b.hibernate();
         assertEquals("Seppo is hibernating and can't exercise.", b.exercise());
     }
-    
+
     @Test
     public void friendTest() {
         Animal a = new Bunny("Irma");

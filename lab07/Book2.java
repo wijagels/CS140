@@ -49,9 +49,9 @@ public class Book2
     public String toString()
     {
         return title + ", " + pageCount +
-                ", " + (isRequired() ? "" : "not ") + // Conditional Operator
-                "required" +
-                ", currently up to page " + bookmark +
-                ", " + computeCompleted() * 100 + "% completed";
+            ", " + (isRequired() ? "" : "not ") + // Conditional Operator
+            "required" +
+            ", currently up to page " + bookmark +
+            ", " + computeCompleted() * 100 + "% completed";
     }
 }

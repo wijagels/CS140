@@ -19,9 +19,9 @@ public class Runner {
             }
         }
         Triple[] programCode = {
-                new Triple(1, 0, 1),
-                new Triple(3, 1, 1),
-                new Triple(2, 2, 1),
+            new Triple(1, 0, 1),
+            new Triple(3, 1, 1),
+            new Triple(2, 2, 1),
         };
 
         model.setData(0, 8);

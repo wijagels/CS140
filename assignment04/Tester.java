@@ -73,44 +73,44 @@ public class Tester {
 
     @Test
     public void testSelectionSort() {
-	ArrayList<Bunny> bs = new ArrayList<Bunny>();
-	Bunny a = new Bunny("a", 0);
-	Bunny b = new Bunny("b", 0);
-	Bunny c = new Bunny("c", 0);
-	bs.add(c);
-	bs.add(b);
-	bs.add(a);
+        ArrayList<Bunny> bs = new ArrayList<Bunny>();
+        Bunny a = new Bunny("a", 0);
+        Bunny b = new Bunny("b", 0);
+        Bunny c = new Bunny("c", 0);
+        bs.add(c);
+        bs.add(b);
+        bs.add(a);
 
-	Comparator comp = Comparator.nullsLast(Comparator.comparingInt(Bunny::getWeight).thenComparing(Comparator.comparing(Bunny::getName)));
+        Comparator comp = Comparator.nullsLast(Comparator.comparingInt(Bunny::getWeight).thenComparing(Comparator.comparing(Bunny::getName)));
 
-	Sorter sorter = new Sorter();
+        Sorter sorter = new Sorter();
 
-	ArrayList<Bunny> cp = new ArrayList<Bunny>(bs);
-	ArrayList<Bunny> sorted = sorter.selectionSort(cp, comp);
+        ArrayList<Bunny> cp = new ArrayList<Bunny>(bs);
+        ArrayList<Bunny> sorted = sorter.selectionSort(cp, comp);
 
-	assertEquals("a", sorted.get(0).getName());
-	assertEquals("b", sorted.get(1).getName());
-	assertEquals("c", sorted.get(2).getName());
+        assertEquals("a", sorted.get(0).getName());
+        assertEquals("b", sorted.get(1).getName());
+        assertEquals("c", sorted.get(2).getName());
 
-	bs.add(new Bunny("A", 0));
-	cp = new ArrayList<Bunny>(bs);
-	sorted = sorter.selectionSort(cp, comp);
+        bs.add(new Bunny("A", 0));
+        cp = new ArrayList<Bunny>(bs);
+        sorted = sorter.selectionSort(cp, comp);
 
-	assertEquals("A", sorted.get(0).getName());
-	assertEquals("a", sorted.get(1).getName());
-	assertEquals("b", sorted.get(2).getName());
-	assertEquals("c", sorted.get(3).getName());
+        assertEquals("A", sorted.get(0).getName());
+        assertEquals("a", sorted.get(1).getName());
+        assertEquals("b", sorted.get(2).getName());
+        assertEquals("c", sorted.get(3).getName());
 
-	bs.add(new Bunny("B", 1));
-	bs.add(new Bunny("A", 2));
-	cp = new ArrayList<Bunny>(bs);
-	sorted = sorter.selectionSort(cp, comp);
+        bs.add(new Bunny("B", 1));
+        bs.add(new Bunny("A", 2));
+        cp = new ArrayList<Bunny>(bs);
+        sorted = sorter.selectionSort(cp, comp);
 
-	assertEquals("A", sorted.get(0).getName());
-	assertEquals("a", sorted.get(1).getName());
-	assertEquals("b", sorted.get(2).getName());
-	assertEquals("c", sorted.get(3).getName());
-	assertEquals("B", sorted.get(4).getName());
-	assertEquals("A", sorted.get(5).getName());
+        assertEquals("A", sorted.get(0).getName());
+        assertEquals("a", sorted.get(1).getName());
+        assertEquals("b", sorted.get(2).getName());
+        assertEquals("c", sorted.get(3).getName());
+        assertEquals("B", sorted.get(4).getName());
+        assertEquals("A", sorted.get(5).getName());
     }
 }

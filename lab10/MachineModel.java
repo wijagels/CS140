@@ -216,10 +216,10 @@ public class MachineModel extends Observable{
                 throw new IllegalArgumentException(
                         "Illegal indirection level in JMPZ instruction");
             if(level == 0) {
-               if(cpu.accumulator == 0)
-                   cpu.programCounter = arg;
-               else
-                   cpu.programCounter++;
+                if(cpu.accumulator == 0)
+                    cpu.programCounter = arg;
+                else
+                    cpu.programCounter++;
             }
             else
                 INSTRUCTION_MAP.get(0xC).execute(memory.getData(arg), level-1);

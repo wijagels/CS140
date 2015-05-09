@@ -1,8 +1,8 @@
 package lab07;
 /**
- A bank account has a balance that can be changed by
- deposits and withdrawals.
- */
+  A bank account has a balance that can be changed by
+  deposits and withdrawals.
+  */
 public class BankAccount {
     private double balance;
     /**
@@ -24,34 +24,34 @@ public class BankAccount {
     }
 
     /**
-     Deposits money into the bank account.
-     @param amount the amount to deposit
-     */
+      Deposits money into the bank account.
+      @param amount the amount to deposit
+      */
     public void deposit(double amount) {
         balance = balance + amount;
     }
 
     /**
-     Withdraws money from the bank account.
-     @param amount the amount to withdraw
-     */
+      Withdraws money from the bank account.
+      @param amount the amount to withdraw
+      */
     public void withdraw(double amount) {
         balance = balance - amount;
     }
 
     /**
-     Gets the current balance of the bank account.
-     @return the current balance
-     */
+      Gets the current balance of the bank account.
+      @return the current balance
+      */
     public double getBalance()  {
         return balance;
     }
 
     /**
-     Transfers money from the bank account to another account
-     @param amount the amount to transfer
-     @param other the other account
-     */
+      Transfers money from the bank account to another account
+      @param amount the amount to transfer
+      @param other the other account
+      */
     public void transfer(double amount, BankAccount other)  {
         withdraw(amount);
         other.deposit(amount);

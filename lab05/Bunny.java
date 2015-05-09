@@ -7,6 +7,6 @@ public class Bunny extends Animal {
 
     @Override
     public boolean wantsFriends() {
-    	return true;
+        return true;
     }
 }

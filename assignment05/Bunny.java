@@ -6,6 +6,6 @@ public class Bunny extends Animal {
     }
 
     public String speak() {
-    	return "";
+        return "";
     }
 }

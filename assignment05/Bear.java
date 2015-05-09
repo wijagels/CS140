@@ -7,6 +7,6 @@ public class Bear extends Animal {
 
     @Override
     public String speak() {
-    	return "roar";
+        return "roar";
     }
 }

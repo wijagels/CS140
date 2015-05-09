@@ -1,7 +1,7 @@
 package assignment03;
 
 public class Bunny {
-	private String name;
+    private String name;
 
     public Bunny(String name) {
         this.name = name;

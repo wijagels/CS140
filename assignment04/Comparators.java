@@ -34,7 +34,7 @@ public class Comparators {
      */
     public Comparator<Person> getPersonComparatorComplex() {
         return Comparator.comparing((Person p) -> p.getName())
-        .thenComparing(Comparator.comparingInt((Person p) -> p.getFarm().getBunnies().size()))
-        .thenComparing(Comparator.comparingInt((Person p) -> p.getFarm().getBunnies().stream().mapToInt(x -> x.getName().length()).sum()));
+            .thenComparing(Comparator.comparingInt((Person p) -> p.getFarm().getBunnies().size()))
+            .thenComparing(Comparator.comparingInt((Person p) -> p.getFarm().getBunnies().stream().mapToInt(x -> x.getName().length()).sum()));
     }
 }

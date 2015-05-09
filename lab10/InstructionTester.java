@@ -50,7 +50,7 @@ public class InstructionTester {
         Instruction instr = machine.get(0x1);
         machine.setAccumulator(27);
         int arg = 12;
-            // should load -2560+120 into the accumulator
+        // should load -2560+120 into the accumulator
         instr.execute(arg, 1);
         //Test machine is not changed
         assertArrayEquals(dataCopy, machine.getData());
@@ -68,8 +68,8 @@ public class InstructionTester {
         Instruction instr = machine.get(0x1);
         machine.setAccumulator(27);
         int arg = 12;
-            // should load 12 into the accumulator
-            instr.execute(arg, 0);
+        // should load 12 into the accumulator
+        instr.execute(arg, 0);
         //Test machine is not changed
         assertArrayEquals(dataCopy, machine.getData());
         //Test program counter incremented
@@ -136,11 +136,11 @@ public class InstructionTester {
     }
 
     @Test (expected=IllegalArgumentException.class)
-    // Test whether STO throws exception with immediate addressing
-    public void testSTOimmediate() {
-        Instruction instr = machine.get(0x2);
-        instr.execute(0, 0);
-    }
+        // Test whether STO throws exception with immediate addressing
+        public void testSTOimmediate() {
+            Instruction instr = machine.get(0x2);
+            instr.execute(0, 0);
+        }
 
     @Test 
     // this test checks whether the add is done correctly, when
@@ -373,11 +373,11 @@ public class InstructionTester {
     }
 
     @Test (expected=IllegalArgumentException.class)
-    // Test whether JUMP throws exception with immediate addressing
-    public void testJUMPindirect() {
-        Instruction instr = machine.get(0xB);
-        instr.execute(0, 2);
-    }
+        // Test whether JUMP throws exception with immediate addressing
+        public void testJUMPindirect() {
+            Instruction instr = machine.get(0xB);
+            instr.execute(0, 2);
+        }
 
     @Test 
     // this test checks whether the jump is done correctly, when
@@ -445,11 +445,11 @@ public class InstructionTester {
 
 
     @Test (expected=IllegalArgumentException.class)
-    // Test whether JMPZ throws exception with immediate addressing
-    public void testJMPZindirect() {
-        Instruction instr = machine.get(0xC);
-        instr.execute(0, 2);
-    }
+        // Test whether JMPZ throws exception with immediate addressing
+        public void testJMPZindirect() {
+            Instruction instr = machine.get(0xC);
+            instr.execute(0, 2);
+        }
 
     @Test
     // Check AND when accum and mem equal to 0 gives false
@@ -605,11 +605,11 @@ public class InstructionTester {
     }
 
     @Test (expected=IllegalArgumentException.class)
-    // Test whether AND throws exception with indirect addressing
-    public void testANDindirect() {
-        Instruction instr = machine.get(0x7);
-        instr.execute(0, 2);
-    }
+        // Test whether AND throws exception with indirect addressing
+        public void testANDindirect() {
+            Instruction instr = machine.get(0x7);
+            instr.execute(0, 2);
+        }
 
     @Test
     // Check NOT greater than 0 gives false
@@ -660,16 +660,16 @@ public class InstructionTester {
     }
 
     @Test (expected=IllegalArgumentException.class)
-    // Test whether NOT throws exception with immediate addressing
-    public void testNOTdirect() {
-        Instruction instr = machine.get(0X8);
-        instr.execute(0, 1);
-    }
+        // Test whether NOT throws exception with immediate addressing
+        public void testNOTdirect() {
+            Instruction instr = machine.get(0X8);
+            instr.execute(0, 1);
+        }
 
     @Test (expected=IllegalArgumentException.class)
-    // Test whether NOT throws exception with indirect addressing
-    public void testNOTindirect() {
-        Instruction instr = machine.get(0X8);
-        instr.execute(0, 2);
-    }
+        // Test whether NOT throws exception with indirect addressing
+        public void testNOTindirect() {
+            Instruction instr = machine.get(0X8);
+            instr.execute(0, 2);
+        }
 }

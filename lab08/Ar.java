@@ -8,14 +8,14 @@ public class Ar {
      */
     public static void sort(int[] array) {
         /*for(int i = 0; i < array.length; i++) {
-            for(int j = i; j < array.length; j++) {
-                if(array[i] > array[j]) {
-                    int tmp = array[j];
-                    array[i] = array[j];
-                    array[j] = tmp;
-                }
-            }
-        }*/
+          for(int j = i; j < array.length; j++) {
+          if(array[i] > array[j]) {
+          int tmp = array[j];
+          array[i] = array[j];
+          array[j] = tmp;
+          }
+          }
+          }*/
         if(array != null) {
             for(int h=array.length;h>=0;h--) {
                 for(int i = 0;i < h-1;i++) {

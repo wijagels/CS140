@@ -56,7 +56,7 @@ public class Book2Tester
         System.out.print("Are there more books to enter(Y/N)? ");
         input = keyboard.nextLine();
         while(input.length() == 0 || (input.toUpperCase().charAt(0) != 'Y'
-                && input.toUpperCase().charAt(0) != 'N'))
+                    && input.toUpperCase().charAt(0) != 'N'))
         {
             System.out.print("You must respond with Y or N," +
                     "are there more books to enter (Y/N)?: ");
@@ -71,7 +71,7 @@ public class Book2Tester
         System.out.print("Is the book required (Y/N)? ");
         input = keyboard.nextLine();
         while(input.length() == 0 || (input.toUpperCase().charAt(0) != 'Y'
-                && input.toUpperCase().charAt(0) != 'N'))
+                    && input.toUpperCase().charAt(0) != 'N'))
         {
             System.out.print("You must respond with Y or N," +
                     "is the book required (Y/N)?: ");

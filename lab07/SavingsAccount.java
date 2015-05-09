@@ -1,8 +1,8 @@
 package lab07;
 
 /**
- An account that earns interest at a fixed rate.
- */
+  An account that earns interest at a fixed rate.
+  */
 public class SavingsAccount extends BankAccount {
 
     private double interestRate;

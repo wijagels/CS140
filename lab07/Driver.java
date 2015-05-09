@@ -18,6 +18,6 @@ public class Driver {
                         '\t' + book.isRequired() + '\t' + book.getBookmark());
                 output.flush();
             } while (tester.getMoreBooks());
-        }
+                }
     }
 }

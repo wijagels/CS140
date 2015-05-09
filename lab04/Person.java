@@ -19,11 +19,11 @@ public class Person implements Comparable<Person>{
 
     @Override
     public int compareTo(Person other) {
-	int sum = 0;
-	for(Bunny b : this.bunnyFarm.getBunnies())
-	    sum += b.getName().length();
-	for(Bunny o : other.getFarm().getBunnies())
-	    sum -= o.getName().length();
-	return sum >0 ? 1 : sum <0 ? -1 : 0;
+        int sum = 0;
+        for(Bunny b : this.bunnyFarm.getBunnies())
+            sum += b.getName().length();
+        for(Bunny o : other.getFarm().getBunnies())
+            sum -= o.getName().length();
+        return sum >0 ? 1 : sum <0 ? -1 : 0;
     }
 }

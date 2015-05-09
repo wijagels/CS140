@@ -6,6 +6,6 @@ public class Porcupine extends Animal {
     }
 
     public String speak() {
-    	return "squeak";
+        return "squeak";
     }
 }

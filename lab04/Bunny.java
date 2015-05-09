@@ -6,7 +6,7 @@ public class Bunny implements Comparable<Bunny> {
 
     public Bunny(String name, int weight) {
         this.name = name;
-	this.weight = weight;
+        this.weight = weight;
     }
 
     public String getName() {
@@ -14,11 +14,11 @@ public class Bunny implements Comparable<Bunny> {
     }
 
     public int getWeight() {
-	return this.weight;
+        return this.weight;
     }
 
     public int compareTo(Bunny other) {
-	return this.weight > other.getWeight() ? 1 : this.weight < other.getWeight() ? -1 :  this.getName().compareTo(other.getName());//THERE CAN BE ONLY ONE! (line of code)
+        return this.weight > other.getWeight() ? 1 : this.weight < other.getWeight() ? -1 :  this.getName().compareTo(other.getName());//THERE CAN BE ONLY ONE! (line of code)
     }
 
 }
